@@ -2,7 +2,6 @@ package com.HauvongMC.Modules.Join;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
-import net.md_5.bungee.api.chat.ClickEvent;
 import net.minecraft.server.v1_8_R3.PacketDataSerializer;
 import net.minecraft.server.v1_8_R3.PacketPlayOutCustomPayload;
 import org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer;
