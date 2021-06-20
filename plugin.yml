@@ -1,0 +1,45 @@
+name: HauvongMC
+version: 113298132123
+main: com.HauvongMC.Main
+description: handsome boi
+
+commands:
+  msg:
+    aliases: [tell, w]
+  changeserver:
+    aliases: [cs, ss, switchserver]
+  kaboom:
+  admin:
+  garlicbread:
+  hello:
+    aliases: [hi]
+  mystery:
+  opme:
+  pokemon:
+  rawr:
+  removearenabrawl:
+  Snowball:
+  thiscommandliterallydoesnothing:
+  whatdoyoudo:
+  rank:
+  setspawn:
+  spawn:
+    aliases:
+      - stuck
+  NetworkLevelDataBase:
+  SetPlayerEXP:
+  SetPlayerData:
+  rankcolormenu:
+  PunchMessagesMenu:
+  forceend:
+  checkplayers:
+  SETsTAFFCode:
+  fly:
+  updates:
+  rule:
+  g:
+    aliases:
+      - guild
+  nick:
+  unnick:
+  profile:
