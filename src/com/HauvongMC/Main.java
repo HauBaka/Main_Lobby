@@ -25,7 +25,6 @@ import com.HauvongMC.Listener.PAPIHook;
 import com.HauvongMC.Modules.Nick.Nick;
 import com.HauvongMC.Modules.Nick.Unnick;
 import com.HauvongMC.Modules.scoreboard;
-import com.HauvongMC.Players.GetPlayerData;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
@@ -51,7 +50,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.logging.Logger;
 
-import static com.HauvongMC.Modules.Nick.Nick.sendActionbar;
 
 
 public class Main extends JavaPlugin {

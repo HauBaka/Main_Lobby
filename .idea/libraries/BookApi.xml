@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="BookApi">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../Code/API/BookApi.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
