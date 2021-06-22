@@ -95,13 +95,6 @@ public class Main extends JavaPlugin {
                 entity.remove();
             }
         }
-        Bukkit.getScheduler().scheduleSyncRepeatingTask(this, new Runnable() {
-            @Override
-            public void run() {
-                scoreboard.start();
-            }
-        }, 0, 20);
-
     }
 
     @Override
