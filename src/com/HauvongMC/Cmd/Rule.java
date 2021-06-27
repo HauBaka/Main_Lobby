@@ -1,6 +1,8 @@
 package com.HauvongMC.Cmd;
 
 import com.HauvongMC.Players.SetPlayerData;
+
+import org.bukkit.Bukkit;
 import org.bukkit.Sound;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -22,7 +24,7 @@ public class Rule implements CommandExecutor {
                 sender.sendMessage("§eBạn có thể đọc lại luật bằng cách sử dụng§c /rule");
                 ((Player) sender).playSound(((Player) sender).getLocation(), Sound.LEVEL_UP, 0.5f, 0.5f);
             } else {
-                com.HauvongMC.Modules.Join.Rule.openBook(((Player) sender).getPlayer(), false);
+                Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "ib open rule " + ((Player) sender).getPlayer().getName());
             }
         }
         return true;

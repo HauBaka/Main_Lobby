@@ -8,12 +8,8 @@ import com.HauvongMC.API.Reflection.JSONMessage.ChatExtra;
 import com.HauvongMC.Items.JoinItem;
 import com.HauvongMC.Main;
 import com.HauvongMC.Modules.Join.Head_Status;
-import com.HauvongMC.Modules.Join.Rule;
-import com.HauvongMC.Modules.Nick.Nick;
 import com.HauvongMC.Modules.PlayerVisibility;
-import com.HauvongMC.Modules.scoreboard;
 import com.HauvongMC.Players.GetPlayerData;
-import com.HauvongMC.Players.SetEXP;
 
 import com.nametagedit.plugin.NametagEdit;
 
@@ -49,8 +45,6 @@ public class PlayerJoin implements Listener {
         NametagEdit.getApi().setNametag(p, GetPlayerData.getInfo(p.getName(), "Prefix"), " " + GetPlayerData.getInfo(p.getName(), "Suffix"));
         //join message
         Joinmessage(p);
-        //scoreboard
-        //scoreboard.reload();
         //set item
         p.getInventory().clear();
         p.getInventory().setItem(0, JoinItem.getGamemenu());
@@ -93,13 +87,13 @@ public class PlayerJoin implements Listener {
         } else {
             p.teleport(Main.getSpawn());
         }
-        if (GetPlayerData.getInfo(p.getName(), "Rule").equalsIgnoreCase("0")) Rule.openBook(p, true);
+        if (GetPlayerData.getInfo(p.getName(), "Rule").equalsIgnoreCase("0")) Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "ib open rulejoin " + p.getName());
         //Nick.getNick(p);
     }
 
     private void Joinmessage(Player p)  {
         String rank = GetPlayerData.getInfo(p.getName(), "Rank");
-        if (rank.equalsIgnoreCase("MVP+")) {
+        if (rank.equalsIgnoreCase("VIP") && rank.equalsIgnoreCase("VIP+") && rank.equalsIgnoreCase("MVP") && rank.equalsIgnoreCase("MVP+")) {
             String guild = "§clỗi";
             String testguild = GetPlayerData.getInfo(p.getName(), "Guild");
             if (testguild != null && testguild != "")  {
@@ -117,7 +111,7 @@ public class PlayerJoin implements Listener {
             for (Player p1 : Bukkit.getOnlinePlayers()) {
                 Reflection.sendChatPacket(p1, text.toString());
             }
-        } else if (rank.equalsIgnoreCase("MVP++")) {
+        } else if (rank.equalsIgnoreCase("MVP++") && rank.equalsIgnoreCase("YOUTUBE") && p.isOp()) {
             String guild = "§clỗi";
             String testguild = GetPlayerData.getInfo(p.getName(), "Guild");
             if (testguild != null && testguild != "")  {

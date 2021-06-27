@@ -2,7 +2,6 @@ package com.HauvongMC.Events.MenuEvents.SubMenuEvents;
 
 import com.HauvongMC.Menu.ProfileViewer;
 import com.HauvongMC.Players.GetPlayerData;
-import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;

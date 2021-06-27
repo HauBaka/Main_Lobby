@@ -7,8 +7,6 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.ItemStack;
 
-import java.util.ArrayList;
-
 public class MenuHeader implements Listener {
     @EventHandler
     public void invclick(InventoryClickEvent event) {

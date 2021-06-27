@@ -163,19 +163,6 @@ public class LobbyEvent implements Listener {
     }
 
     @EventHandler
-    public void portal(PlayerPortalEvent event) {
-        if (!(event.getPlayer().getWorld().getName().equalsIgnoreCase(Main.getSpawn().getWorld().getName()))) {
-            return;
-        }
-        event.setCancelled(true);
-        Player p = event.getPlayer();
-        Vector unitVector = new Vector(p.getLocation().getDirection().getX(), 0, p.getLocation().getDirection().getZ());
-        unitVector = unitVector.normalize();
-        p.setVelocity(unitVector.multiply(1));
-        p.performCommand("dm open server");
-    }
-
-    @EventHandler
     public void interact(PlayerInteractEvent event) {
         if (!(event.getPlayer().getWorld().getName().equalsIgnoreCase(Main.getSpawn().getWorld().getName()))) {
             return;
@@ -373,19 +360,11 @@ public class LobbyEvent implements Listener {
     }
 
     @EventHandler
-    public void onWitherLaunch(ProjectileLaunchEvent e) {
-        if (!(e.getEntity().getWorld().getName().equalsIgnoreCase(Main.getSpawn().getWorld().getName()))) {
-            return;
-        }
-        if (e.getEntity() instanceof WitherSkull) {
-            e.setCancelled(true);
-        }
-    }
-
-    @EventHandler
-    public void weatherchange(WeatherChangeEvent e) {
-        e.setCancelled(true);
-    }
+	private void onWeather(WeatherChangeEvent e) {
+		if (e.toWeatherState()) {
+			e.setCancelled(true);
+		}
+	}
 
     @EventHandler
     public void worldchange(PlayerChangedWorldEvent e) {

@@ -6,8 +6,6 @@ import com.nametagedit.plugin.NametagEdit;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 import net.dev.eazynick.api.NickManager;
-import net.md_5.bungee.api.ChatMessageType;
-import net.md_5.bungee.api.chat.TextComponent;
 import net.minecraft.server.v1_8_R3.IChatBaseComponent;
 import net.minecraft.server.v1_8_R3.PacketDataSerializer;
 import net.minecraft.server.v1_8_R3.PacketPlayOutChat;

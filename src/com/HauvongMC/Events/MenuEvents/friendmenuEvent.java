@@ -1,7 +1,6 @@
 package com.HauvongMC.Events.MenuEvents;
 
 import com.HauvongMC.Menu.friendsmenu;
-import com.HauvongMC.Menu.guildmenu;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;

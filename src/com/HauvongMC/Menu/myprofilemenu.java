@@ -3,7 +3,9 @@ package com.HauvongMC.Menu;
 import com.HauvongMC.Items.MenuItems;
 import com.HauvongMC.Players.GetPlayerData;
 import com.HauvongMC.Players.SetEXP;
-import com.yapzhenyie.GadgetsMenu.player.PlayerManager;
+
+import me.clip.placeholderapi.PlaceholderAPI;
+
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
@@ -63,8 +65,9 @@ public class myprofilemenu {
         itemLore.add("§7Level: §6" + p.getLevel());
         itemLore.add("§7Kinh nghiệm để sang cấp tiếp theo:§6 " + SetEXP.getNextLVEXP(p));
         itemLore.add("§7Điểm thành tựu: §e" + GetPlayerData.getInfo(p.getName(), "Achievement_Points"));
-        PlayerManager playerManager = new PlayerManager(p.getUniqueId());
-        itemLore.add("§7Bụi bí ẩn: §b" + playerManager.getMysteryDust());
+        String i = "%gadgetsmenu_mystery_dust%";
+        i = PlaceholderAPI.setPlaceholders(p, i);
+        itemLore.add("§7Bụi bí ẩn: §b" + i);
         itemLore.add("§7Nhiệm vụ đã hoàn thành: §60");
         itemLore.add("§7Karma: §d" + GetPlayerData.getInfo(p.getName(), "Karma"));
         itemLore.add("§7Vàng LuckyMCVN: §6" + GetPlayerData.getInfo(p.getName(), "Gold"));

@@ -1,6 +1,5 @@
 package com.HauvongMC.Events.MenuEvents;
 
-import com.HauvongMC.Menu.friendsmenu;
 import com.HauvongMC.Menu.recentplayersmenu;
 import com.HauvongMC.Players.SetPlayerData;
 import org.bukkit.Sound;

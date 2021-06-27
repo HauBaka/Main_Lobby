@@ -24,7 +24,6 @@ import com.HauvongMC.Listener.PAPIHook;
 
 import com.HauvongMC.Modules.Nick.Nick;
 import com.HauvongMC.Modules.Nick.Unnick;
-import com.HauvongMC.Modules.scoreboard;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
@@ -209,7 +208,6 @@ public class Main extends JavaPlugin {
         this.getCommand("updates").setExecutor(new UpdatesCommand());
         this.getCommand("Rule").setExecutor(new Rule());
         //staffcommands
-        this.getCommand("ForceEnd").setExecutor(new ForceEnd());
         this.getCommand("Rank").setExecutor(new SetRank());
         this.getCommand("kaboom").setExecutor(new Kaboom());
         this.getCommand("cs").setExecutor(new ChangeServer());
